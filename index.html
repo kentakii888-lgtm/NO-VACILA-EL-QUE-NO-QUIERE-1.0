@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO VACILA EL QUE NO QUIERE</title>
+</head>
+<body>
+    <!-- Animación de Carga -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <img src="img/logito (1).jpg" alt="Logo" style="height: 50px; vertical-align: middle;">
+        NO VACILA EL QUE NO QUIERE
+        <img src="img/logito (1).jpg" alt="Logo" style="height: 50px; vertical-align: middle;">
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="perfiles.html">Perfiles</a>
+        <a href="juego.html">Juego</a>
+        <a href="#contacto">Contacto</a>
+        <!-- Interruptor de Modo Oscuro -->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="theme-toggle">
+                <input type="checkbox" id="theme-toggle" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </nav>
+    <div class="main-grid-container">
+        <div class="left-column">
+            <section id="inicio" class="container hidden">
+                <h1 class="main-title">Bienvenidos</h1>
+                <p class="intro">Somos el grupo "No vacila el que no quiere", un equipo apasionado por la creatividad, la innovación y el trabajo en equipo. Nos dedicamos a crear experiencias únicas y a superar cualquier reto que se nos presente.</p>
+            </section>
+
+
+            <section id="recuerdos" class="container">
+                <h2 class="subtitle">Recuerdos</h2>
+                <p class="intro">En esta sección compartiremos fotos, anécdotas y momentos especiales del grupo "No vacila el que no quiere". ¡Próximamente más recuerdos!</p>
+                
+                <h3 class="subtitle" style="margin-top: 2rem;">Galería de Fotos</h3>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="img/patri3.jpg" alt="Foto 1" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/coco2.jpg" alt="Foto 2" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/patri2.jpg" alt="Foto 3" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/eze3.jpg" alt="Foto 4" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/eze2.jpg" alt="Foto 5" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/pota3.jpg" alt="foto 6" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/pota2.jpg" alt="foto 7" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/coco3.jpg" alt="foto 8" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/eze4.jpg" alt="foto 9" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/patri4.jpg" alt="foto 10" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/pota4.jpg" alt="foto 11" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/pota5.jpg" alt="foto 12" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/patriypota.jpg" alt="foto 13" loading="lazy">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+                <h3 class="subtitle" style="margin-top: 2rem;">Videos</h3>
+                <div class="videos-grid">
+                    <div>
+                        <video controls width="100%" preload="none" poster="img/poster1.jpg" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+                            <source src="img/video1.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div>
+                        <video controls width="100%" preload="none" poster="img/poster3.jpg" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+                            <source src="img/video3.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div>
+                        <video controls width="100%" preload="none" poster="img/poster2.jpg" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+                            <source src="img/video2.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div>
+                    </div>
+                    <!-- Boceto para otro video -->
+                    <div class="video-placeholder">
+                        Próximamente otro video...
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="frases-anecdotas" class="container hidden">
+                <h2 class="subtitle">Frases Célebres y Anécdotas</h2>
+
+                <div class="frases-anecdotas-grid">
+                    <blockquote class="frase">
+                        "El semental florense."<br>
+                        <span class="autor">- Coco se lo dijo a laure</span>
+                    </blockquote>
+                    <blockquote class="frase">
+                        "El rompe telitas"<br>
+                        <span class="autor">- Eze a laure</span>
+                    </blockquote>
+                    <div class="anecdota">
+                        <strong>Anécdota:</strong> Estabamos en la ruta y a lo lejos se asomaba el principe (una persona reconocida en la ciudad de las flores) y nos vino a hablar de los politicos que eran todos corruptos
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        <div class="right-column">
+            <section id="ubicacion" class="container hidden">
+                <h2 class="subtitle">Ubicación</h2>
+                <p class="location">La ciudad de las flores, Provincia de Buenos Aires</p>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13135.634970123456!2d-58.8923456!3d-34.5748392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd123456789ab%3A0x123456789abcdef!2sLa%20Ciudad%20de%20Las%20Flores%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1699999999999!5m2!1ses!2sar" 
+                    width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section> 
+            <section id="eventos" class="container hidden">
+                <h2 class="subtitle">Próximos Eventos</h2>
+                <p>¡Mantente al día con nuestras juntadas y actividades! El calendario se actualiza automáticamente.</p>
+                <!-- 
+                    INSTRUCCIONES: 
+                    1. Ve a la configuración de tu Google Calendar.
+                    2. Hazlo público y copia el código para "Insertar calendario".
+                    3. Pega tu código iframe aquí debajo, reemplazando este.
+                -->
+                <iframe src="https://calendar.google.com/calendar/embed?src=ejemplo%40gmail.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+            </section>
+            <section id="muro" class="container">
+                <h2 class="subtitle">Muro de Mensajes</h2>
+                <form id="muro-form" class="muro-form">
+                    <input type="text" id="muro-nombre" placeholder="Tu nombre" required maxlength="20">
+                    <!-- Campo Honeypot anti-spam: oculto para los usuarios -->
+                    <input type="text" name="honeypot" class="honeypot-field" style="display:none;">
+                    <textarea id="muro-mensaje" placeholder="Escribe tu mensaje..." required maxlength="120"></textarea>
+                    <button type="submit">Publicar</button>
+                </form>
+                <ul id="muro-lista" class="muro-lista"></ul>
+            </section>
+            <section id="contacto" class="container hidden">
+                <h2 class="subtitle">Contacto</h2>
+                <p>¿Tienes alguna pregunta o sugerencia? ¡Escríbenos!</p>
+                <!-- IMPORTANTE: Reemplaza la URL con la tuya de Formspree -->
+                <form id="contacto-form" action="https://formspree.io/f/your_unique_id" method="POST">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </section>
+            <section id="contador" class="container hidden">
+                <h2 class="subtitle">Contador de Visitas</h2>
+                <div id="contador-visitas">
+                    <!-- 
+                        INSTRUCCIONES:
+                        Genera un contador en https://www.free-counters.org/ o similar y pega el código aquí.
+                    -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 NO VACILA EL QUE NO QUIERE. Todos los derechos reservados. <a href="https://youtu.be/cZy9f2OuKMc">Política de privacidad</a>
+    </footer>
+
+    <!-- Botón para Volver Arriba -->
+    <button id="back-to-top-btn" title="Volver arriba">&#8679;</button>
+
+    <!-- Carga del script optimizada -->
+    <script src="script.js" defer></script>
+</body>
+</html>
