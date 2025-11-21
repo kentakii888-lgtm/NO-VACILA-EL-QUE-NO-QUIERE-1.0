@@ -1,0 +1,475 @@
+/* --- VARIABLES DE COLOR --- */
+:root {
+    --color-bg: #f4f4f4;
+    --color-container-bg: white;
+    --color-text-primary: #333;
+    --color-text-secondary: #555;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-border: #eee;
+    --color-main-red: #dc3545;
+    --color-main-red-dark: #c82333;
+    --color-header-bg: #b02a37;
+    --color-footer-link: #ffdddd;
+    --color-frase-quote: rgba(220, 53, 69, 0.1);
+    --color-modal-bg: rgba(0, 0, 0, 0.6);
+    --color-modal-content-bg: #fefefe;
+}
+
+body.dark-mode {
+    --color-bg: #121212;
+    --color-container-bg: #1e1e1e;
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #b0b0b0;
+    --color-shadow: rgba(255, 255, 255, 0.05);
+    --color-border: #333;
+    --color-main-red: #e57373;
+    --color-main-red-dark: #ef5350;
+    --color-header-bg: #b02a37; /* Mantenemos el rojo oscuro para identidad */
+    --color-footer-link: #e57373;
+    --color-frase-quote: rgba(229, 115, 115, 0.1);
+    --color-modal-bg: rgba(0, 0, 0, 0.8);
+    --color-modal-content-bg: #2c2c2c;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- ESTILOS DE PRELOADER (SPINNER) --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+.spinner {
+    border: 8px solid var(--color-border);
+    border-top: 8px solid var(--color-main-red);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Contenedor principal */
+.container {
+    background-color: var(--color-container-bg);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+/* Encabezado */
+header {
+    background-color: #b02a37; /* Tono rojo oscuro */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: var(--color-main-red);
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover, nav a:focus {
+    background-color: var(--color-main-red-dark);
+    border-radius: 5px;
+}
+
+/* Títulos */
+.main-title {
+    color: var(--color-header-bg);
+}
+.subtitle {
+    color: var(--color-main-red-dark);
+    border-bottom: 2px solid var(--color-main-red);
+    padding-bottom: 5px;
+}
+
+/* Introducción */
+.intro {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Diseño de la cuadrícula principal */
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Carrusel de imágenes */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.mySlides img {
+    width: 100%;
+    border-radius: 12px;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Cuadrícula de videos */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* --- NUEVOS ESTILOS: Frases Célebres y Anécdotas --- */
+.frases-anecdotas-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.frase, .anecdota {
+    background-color: var(--color-bg);
+    border-left: 5px solid #ccc;
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 2px 5px var(--color-shadow);
+    position: relative;
+}
+
+.frase {
+    border-left-color: var(--color-main-red);
+    font-style: italic;
+}
+
+/* Icono de comillas para las frases */
+.frase::before {
+    content: '“';
+    font-family: 'Georgia', serif;
+    font-size: 4em;
+    color: var(--color-frase-quote);
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.frase .autor {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    color: var(--color-main-red-dark);
+}
+
+.anecdota {
+    border-left-color: var(--color-main-red);
+}
+
+.anecdota strong {
+    color: var(--color-main-red-dark);
+}
+/* --- FIN DE NUEVOS ESTILOS --- */
+
+/* --- ESTILOS MURO DE MENSAJES --- */
+.muro-form button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+.muro-form button:hover {
+    background-color: var(--color-main-red-dark);
+}
+
+
+
+/* --- ESTILOS FORMULARIO DE CONTACTO --- */
+#contacto-form {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+#contacto-form label {
+    font-weight: bold;
+    color: var(--color-text-secondary);
+}
+#contacto-form input,
+#contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+}
+#contacto-form button {
+    background-color: var(--color-main-red);
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#contacto-form button:hover {
+    background-color: var(--color-main-red-dark);
+}
+
+/* Estilos para el contador de visitas */
+#contador-visitas {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Estilos para las animaciones */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para el botón "Volver Arriba" */
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--color-main-red);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #b02a37; /* Mismo rojo oscuro que el header */
+    color: white;
+    margin-top: 20px;
+}
+footer a {
+    color: var(--color-footer-link);
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    .main-grid-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    .right-column {
+        order: -1; /* Mueve la columna derecha arriba */
+    }
+
+    /* Ajusta el tamaño de la fuente y el margen para pantallas más pequeñas */
+    header {
+        font-size: 20px;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* --- ESTILOS PARA PÁGINA DE PERFILES --- */
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--color-modal-bg);
+}
+.modal-content {
+    background-color: var(--color-modal-content-bg);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-btn:hover, .close-btn:focus {
+    color: var(--color-main-red);
+}
+#profiles-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.open-profile-btn {
+    background-color: var(--color-main-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.open-profile-btn:hover {
+    background-color: var(--color-main-red-dark);
+}
+
+/* --- ESTILOS PARA PÁGINA DE JUEGO --- */
+.juego-container {
+    text-align: center;
+}
+.quiz-opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+.quiz-opciones button, #quiz-start-btn {
+    background-color: var(--color-main-red);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+.quiz-opciones button:hover, #quiz-start-btn:hover {
+    background-color: var(--color-main-red-dark);
+}
+
+/* --- ESTILOS PARA INTERRUPTOR DE MODO OSCURO --- */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+}
+.theme-switch input {
+    display: none;
+}
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+input:checked + .slider {
+    background-color: var(--color-main-red-dark);
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}

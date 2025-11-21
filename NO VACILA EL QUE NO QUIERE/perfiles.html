@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfiles</title>
+</head>
+<body>
+    <!-- Animación de Carga -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <img src="img/logito (1).jpg" alt="Logo" style="height: 50px; vertical-align: middle;">
+        NO VACILA EL QUE NO QUIERE
+        <img src="img/logito (1).jpg" alt="Logo" style="height: 50px; vertical-align: middle;">
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <!-- Interruptor de Modo Oscuro -->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="theme-toggle">
+                <input type="checkbox" id="theme-toggle" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="main-title">Perfiles</h1>
+        <h2 class="subtitle">Conoce a nuestro equipo</h2>
+        <div id="profiles-list">
+            <!-- Los botones para abrir perfiles se generarán aquí con JavaScript -->
+        </div>
+        <div id="profile-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div id="modal-profile-card"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 NO VACILA EL QUE NO QUIERE. Todos los derechos reservados. <a href="#">Política de privacidad</a>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
